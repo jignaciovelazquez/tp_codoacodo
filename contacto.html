@@ -103,8 +103,8 @@
 
                 <div class="col-12 position-relative">
                     <div class="row">
-                        <label for="EDIFPROGRA" class="col-sm-4 col-form-label text-start">¿Cuando te podemos
-                            llamar?:</label>
+                        <label for="EDIFPROGRA" class="col-sm-3 col-form-label text-start">¿Cuando nos podemos
+                            contactar?:</label>
                         <div class="col-sm-2">
                             <select id="EDIFPROGRA" class="form-select" required>
                                 <option selected disabled value="">Seleccione</option>
@@ -117,10 +117,25 @@
                                 ¡Debes indicar en que horario te podemos llamar!
                             </div>
                         </div>
-                        <div class="col-sm-4 offset-md-1">
+                        <div class="col-sm-3">
                             <input type="date" class="form-control" id="FECHA" required>
                             <div class="invalid-tooltip">
                                 ¡Debes indicar en que Fecha te podemos llamar!
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="CALL" checked>
+                                <label class="form-check-label" for="CALL">
+                                    Llamada
+                                </label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="WASAP">
+                                <label class="form-check-label" for="WASAP">
+                                    WhatsApp
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -129,13 +144,19 @@
                 <div class="col-12 position-relative">
                     <div class="row">
                         <label for="MESSAGE" class="col-sm-3 col-form-label text-start">Consulta:</label>
-                        <div class="input-group mb-3">
-                            <textarea class="form-control" id="MESSAGE" rows="5" aria-describedby="button-addon2"
-                                required></textarea>
-                            <div class="invalid-tooltip">
-                                ¡Debes indicar una consulta que quieras resolver!
-                            </div>
+                        <textarea class="form-control" id="MESSAGE" rows="5" aria-describedby="button-addon2"
+                            required></textarea>
+                        <div class="invalid-tooltip">
+                            ¡Debes indicar una consulta que quieras resolver!
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="formFile" class="form-label text-start">Puedes adjuntar una imagen para complementar
+                            tu consulta:</label>
+                        <input class="form-control" type="file" id="formFile">
                     </div>
                 </div>
 
