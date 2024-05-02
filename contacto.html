@@ -35,7 +35,119 @@
     </nav>
 
     <section>
-        <h1>CONTACTO</h1>
+        <div class="container-xxl text-center">
+            <h1>CONTACTANOS</h1>
+            <form id="CONTACT_FORM" class="row g-2 needs-validation" onsubmit="return false" novalidate>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="NAME" class="col-sm-2 col-form-label text-start">Nombre:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="NAME" placeholder="Ingrese su Nombre" required>
+                            <div class="invalid-tooltip">
+                                ¡Debes ingresar tu Nombre!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="SURNAME" class="col-sm-2 col-form-label text-start">Apellido:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="SURNAME" placeholder="Ingrese su Apellido"
+                                required>
+                            <div class="invalid-tooltip">
+                                ¡Debes ingresar tu Apellido!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="PHONE" class="col-sm-2 col-form-label text-start">Telefono:</label>
+                        <div class="col-sm-5">
+                            <input type="number" class="form-control" id="PHONE" placeholder="1112345678 " required>
+                            <div class="invalid-tooltip">
+                                ¡Debes ingresar tu numero telefonico!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="ADDRESS" class="col-sm-2 col-form-label text-start">Dirección:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="ADDRESS" placeholder="Ingrese la Dirección"
+                                required>
+                            <div class="invalid-tooltip">
+                                ¡Debes ingresar tu Dirección!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="MAIL" class="col-sm-2 col-form-label text-start">Email:</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="MAIL" placeholder="Ingrese su Email" required>
+                            <div class="invalid-tooltip">
+                                ¡Debes ingresar tu Email!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="EDIFPROGRA" class="col-sm-4 col-form-label text-start">¿Cuando te podemos
+                            llamar?:</label>
+                        <div class="col-sm-2">
+                            <select id="EDIFPROGRA" class="form-select" required>
+                                <option selected disabled value="">Seleccione</option>
+                                <option value="8">8-10</option>
+                                <option value="10">10-12</option>
+                                <option value="14">14-16</option>
+                                <option value="16">16-18</option>
+                            </select>
+                            <div class="invalid-tooltip">
+                                ¡Debes indicar en que horario te podemos llamar!
+                            </div>
+                        </div>
+                        <div class="col-sm-4 offset-md-1">
+                            <input type="date" class="form-control" id="FECHA" required>
+                            <div class="invalid-tooltip">
+                                ¡Debes indicar en que Fecha te podemos llamar!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 position-relative">
+                    <div class="row">
+                        <label for="MESSAGE" class="col-sm-3 col-form-label text-start">Consulta:</label>
+                        <div class="input-group mb-3">
+                            <textarea class="form-control" id="MESSAGE" rows="5" aria-describedby="button-addon2"
+                                required></textarea>
+                            <div class="invalid-tooltip">
+                                ¡Debes indicar una consulta que quieras resolver!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 pt-2">
+                    <div class="row justify-content-center">
+                        <div class="col-6 d-grid ">
+                            <button id="SEND" type="submit" class="btn btn-success">ENVIAR</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
 
     </section>
 
