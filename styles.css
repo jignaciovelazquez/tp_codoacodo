@@ -1,27 +1,3 @@
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  background-color: #0e5514;
-}
-
 /*********************************** NavBar con FleBox ************************************************/
 
 nav {
@@ -68,6 +44,7 @@ nav {
   display: flex;
   animation: animate 0.6s linear infinite;
   border: 3px solid #054e0b;
+  display: block;
 }
 
 @keyframes animate {
@@ -88,10 +65,74 @@ nav {
   display: flex;
 }
 
+header {
+  background-color: #054e0b;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+body {
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*********************************** Footer************************************************/
+footer {
+  background-color: #054e0b;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.grid-container {
+  background-color: #054e0b;
+  color: #fff;
+  padding: 2px;
+  margin-top: 5px;
+  display: grid;
+  grid-template-areas:
+    "curso curso curso curso curso redes"
+    "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
+}
+
+.curso-area {
+  grid-area: curso;
+}
+
+.redes-area {
+  grid-area: redes;
+}
+
+.integrante1-area {
+  grid-area: integrante1;
+}
+
+.integrante2-area {
+  grid-area: integrante2;
+}
+
+.integrante3-area {
+  grid-area: integrante3;
+}
+
+.grid-container div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid-container p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/****************************************************/
+
 img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 50%;
   border: 3px solid #0e5514;
   border-radius: 10px;
 }
@@ -102,34 +143,11 @@ img {
   font-style: italic;
 }
 
-body {
-  color: black;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #054e0b;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
+/*******************************************************************************************/
 
 section {
   padding: 20px;
   background-color: white;
-}
-
-footer {
-  background-color: #054e0b;
-  color: #fff;
-  padding: 20px 0;
-}
-
-footer div {
-  margin: 0 auto;
-  text-align: center;
 }
 
 #SECTION_CONTACT {
@@ -146,7 +164,7 @@ footer div {
 
 /*********************************** @media query Telefono ************************************************/
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
   .flex-container {
     font-size: 1rem;
     flex-direction: column;
@@ -155,9 +173,36 @@ footer div {
   .flex-container div {
     text-align: center;
   }
+
+  #logo {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "curso"
+      "redes"
+      "integrante1"
+      "integrante2"
+      "integrante3";
+  }
 }
 
 /*********************************** @media query TABLE ************************************************/
 
-@media (max-width: 780px) {
+@media (max-width: 1024px) {
+  #logo {
+    display: none;
+  }
+
+  .flex-container {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "curso curso curso curso curso curso"
+      "redes redes redes redes redes redes"
+      "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
+  }
 }
