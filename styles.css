@@ -1,8 +1,3 @@
-nav {
-  background-color: #4a8645;
-  padding: 10px;
-}
-
 nav ul {
   list-style: none;
   margin: 0;
@@ -26,6 +21,38 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #0e5514;
 }
+
+/*********************************** NavBar con FleBox ************************************************/
+
+nav {
+  background-color: #4a8645;
+  padding: 10px;
+}
+
+.flex-container {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flex-container div {
+  margin: 5px;
+}
+
+.flex-container div a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.flex-container div a:hover {
+  background-color: #0e5514;
+}
+
+/******************************************************************************************************/
 
 #name {
   font-weight: bold;
@@ -103,4 +130,34 @@ footer {
 footer div {
   margin: 0 auto;
   text-align: center;
+}
+
+#SECTION_CONTACT {
+  content: "";
+  background-image: url(./assets/fondocontacto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  height: 300px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/*********************************** @media query Telefono ************************************************/
+
+@media (max-width: 450px) {
+  .flex-container {
+    font-size: 1rem;
+    flex-direction: column;
+  }
+
+  .flex-container div {
+    text-align: center;
+  }
+}
+
+/*********************************** @media query TABLE ************************************************/
+
+@media (max-width: 780px) {
 }

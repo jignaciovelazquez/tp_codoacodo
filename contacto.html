@@ -26,17 +26,20 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./empresa.html">Empresa</a></li>
-            <li><a href="./productos.html">Productos</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-        </ul>
+        <div class="flex-container">
+            <div><a href="./index.html">Home</a></div>
+            <div><a href="./empresa.html">Empresa</a></div>
+            <div><a href="./productos.html">Productos</a></div>
+            <div><a href="./contacto.html">Contacto</a></div>
+        </div>
     </nav>
 
     <section>
+        <div id="SECTION_CONTACT">
+
+        </div>
         <div class="container-xxl text-center">
-            <h1>CONTACTANOS</h1>
+            <h1 id="H1_CONTACT">CONTÁCTANOS</h1>
             <form id="CONTACT_FORM" class="row g-2 needs-validation" onsubmit="return false" novalidate>
 
                 <div class="col-12 position-relative">
@@ -154,7 +157,8 @@
 
                 <div class="col-12 position-relative">
                     <div class="row">
-                        <label for="formFile" class="form-label text-start">Puedes adjuntar una imagen para complementar
+                        <label for="formFile" class="form-label text-start">Puedes adjuntar una imagen para
+                            complementar
                             tu consulta:</label>
                         <input class="form-control" type="file" id="formFile">
                     </div>
@@ -169,7 +173,6 @@
                 </div>
 
             </form>
-
     </section>
 
     <footer>
