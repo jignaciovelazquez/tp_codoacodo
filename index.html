@@ -18,7 +18,7 @@
             <img id="logo" src="./assets/logo.jpg" alt="Logo">
             <div>
                 <p id="name">MAYORISTA DE ALIMENTOS</p>
-                <p>¡del campo a la mesa con excelente calidad!</p>
+                <h5><p>¡La calidad del campo en tu mesa!</p></h5>
             </div>
         </div>
     </header>
@@ -27,8 +27,9 @@
         <div class="flex-container">
             <div><a href="./index.html">Home</a></div>
             <div><a href="./empresa.html">Empresa</a></div>
-            <div><a href="./nuestrosProductos.html">Productos</a></div>
+            <div><a href="./productos.html">Productos</a></div>
             <div><a href="./contacto.html">Contacto</a></div>
+            <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
 
@@ -41,7 +42,44 @@
                 mejor precio.</p>
         </div>
         <p>Siempre los productos de la mejor calidad.</p>
-        <img src="./assets/Alimentos.png" alt="Canasta Alimentos">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/Alimentos.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/acelga.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/huvosCaseros.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/panFelipe.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/tomatesRedondos.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./assets/img/aceiteDeOliva.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </section>
 
     <footer>

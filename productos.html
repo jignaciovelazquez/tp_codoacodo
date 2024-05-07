@@ -17,28 +17,135 @@
             <img id="logo" src="./assets/logo.jpg" alt="Logo">
             <div>
                 <p id="name">MAYORISTA DE ALIMENTOS</p>
-                <p>¡del campo a la mesa con excelente calidad!</p>
+                <h5><p>¡La calidad del campo en tu mesa!</p></h5>
             </div>
         </div>
-    </header>
+    </header>  
+
+    <nav>
+      <div class="flex-container">
+        <div><a href="./index.html">Home</a></div>
+        <div><a href="./empresa.html">Empresa</a></div>
+        <div><a href="./productos.html">Productos</a></div>
+        <div><a href="./contacto.html">Contacto</a></div>
+        <a href="#" id="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    </nav>
 
     <h1>Nuestros Productos</h1>
-    
-    <div class="producto">
-        <img src="producto1.jpg" alt="Producto 1">
-        <h2>Producto 1</h2>
-        <p>Descripción del Producto 1.</p>
-        <p>Precio: $XX.XX</p>
-    </div>
-    
-    <div class="producto">
-        <img src="producto2.jpg" alt="Producto 2">
-        <h2>Producto 2</h2>
-        <p>Descripción del Producto 2.</p>
-        <p>Precio: $XX.XX</p>
-    </div>
-    
-    <!-- Agrega más productos según sea necesario -->
-    
+        <section>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./assets/img/aceiteDeOliva.jpg" alt="Combo Aceite oliva">
+                        <div class="card-body">
+                            <h5 class="card-title">Aceite de Oliva</h5>
+                            <p class="card-text">Este aceite de oliva virgen extra es considerado un superalimento por sus múltiples beneficios para la salud.</p>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(product)">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./assets/img/panFelipe.jpg" alt="Pan Felipe">
+                        <div class="card-body">
+                            <h5 class="card-title">Pan Felipe</h5>
+                            <p class="card-text">Uno de los panes favoritos para hacer sándwiches, acompañar con mantequilla o paté, o para servir con la comida.</p>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(product)">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./assets/img/tomatesRedondos.jpg" alt="Tomates redondos">
+                        <div class="card-body">
+                            <h5 class="card-title">Tomates redondos</h5>
+                            <p class="card-text">Variedad de tomate redondo rojo liso determinada, sin hombros verdes, con una excelente calidad del fruto y una gran variedad de resistencias.</p>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(product)">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./assets/img/acelga.jpg" alt="Acelga fresca">
+                        <div class="card-body">
+                            <h5 class="card-title">Acelga</h5>
+                            <p class="card-text">Recién extraída del campo, después de un pequeño proceso de calidad directo a tu mesa.</p>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(product)">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./assets/img/huvosCaseros.jpg" alt="Huevos Caseros">
+                        <div class="card-body">
+                            <h5 class="card-title">Huevos Caseros</h5>
+                            <p class="card-text">Las gallinas son criadas al aire libre, con espacio para crecer saludables, sin hormonas ni sustancias para aumentar la productividad.</p>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(product)">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="./assets/img/lechuga.jpg" alt="Lechuga capuchina">
+                        <div class="card-body">
+                            <h5 class="card-title">Lechuga capuchina</h5>
+                            <p class="card-text">Una hortaliza de cosecha única, siendo la ensalada de acompañamiento más difundida en cualquier comida. </p>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(product)">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+    <footer>
+        <div class="grid-container">
+            <div class="curso-area">
+                <p>JS-FRONT END 2024 1 - Trabajo Practico HTML, CSS, JS Comision 24122</p>
+            </div>
+            <div class="redes-area">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"
+                        style="color: #4a8645;"></i></a>
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fa-brands fa-square-facebook"
+                        style="color: #4a8645;"></i></a>
+                <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><i class="fa-brands fa-square-whatsapp"
+                        style="color: #4a8645;"></i></a>
+            </div>
+            <div class="integrante1-area">
+                <p>Ignacio Velazquez</p>
+                <a href="https://github.com/jignaciovelazquez" target="_blank"><i class="fa-brands fa-github"
+                        style="color: #4a8645"></i></a>
+            </div>
+            <div class="integrante2-area">
+                <p>Sebastian</p>
+                <a href="https://github.com/spuchinni" target="_blank"><i class="fa-brands fa-github"
+                        style="color: #4a8645"></i></a>
+            </div>
+            <div class="integrante3-area">
+                <p>Jaime</p>
+                <a href="https://github.com/jagacast" target="_blank"><i class="fa-brands fa-github"
+                        style="color: #4a8645"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/e64aa124f5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+    <script>
+        function addToCart(product) {
+            // Lógica para agregar el producto al carrito
+            console.log('Producto agregado al carrito');
+            }
+    </script>
 </body>
+
 </html>
