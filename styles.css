@@ -207,3 +207,26 @@ section {
       "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
   }
 }
+
+/*********************************** @Carrusel ************************************************/
+
+.carousel-item img {
+  height: 300px; /* Ajusta la altura deseada */
+  object-fit: contain;
+}
+/* Estilo personalizado para el carrusel */
+.carousel {
+  background-color: #f0f0f0; /* Color de fondo del carrusel */
+}
+
+/* Estilo personalizado para los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0e5514; /* Color de fondo de los controles de navegación */
+}
+
+/* Estilo personalizado para los botones de navegación del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #fff; /* Color del icono de los botones de navegación */
+}
