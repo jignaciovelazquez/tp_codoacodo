@@ -153,7 +153,7 @@ section {
 
 #SECTION_CONTACT {
   content: "";
-  background-image: url(./assets/fondocontacto.jpg);
+  background-image: url(./assets/img/fondocontacto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -211,7 +211,7 @@ section {
 /*********************************** @Carrusel ************************************************/
 
 .carousel-item img {
-  height: 300px; /* Ajusta la altura deseada */
+  height: 500px; /* Ajusta la altura deseada */
   object-fit: contain;
 }
 /* Estilo personalizado para el carrusel */
@@ -229,4 +229,15 @@ section {
 .carousel-control-prev,
 .carousel-control-next {
   color: #fff; /* Color del icono de los botones de navegación */
+}
+
+/*************************** PRODUCTOS ************************/
+
+#nuestrosProductos img {
+  height: 300px;
+}
+
+#nuestrosProductos span {
+  font-size: large;
+  font-weight: bold;
 }
