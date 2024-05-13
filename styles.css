@@ -163,51 +163,6 @@ section {
   margin-bottom: 10px;
 }
 
-/*********************************** @media query Telefono ************************************************/
-
-@media (max-width: 480px) {
-  .flex-container {
-    font-size: 1rem;
-    flex-direction: column;
-  }
-
-  .flex-container div {
-    text-align: center;
-  }
-
-  #logo {
-    display: none;
-  }
-
-  .grid-container {
-    grid-template-areas:
-      "curso"
-      "redes"
-      "integrante1"
-      "integrante2"
-      "integrante3";
-  }
-}
-
-/*********************************** @media query TABLE ************************************************/
-
-@media (max-width: 1024px) {
-  #logo {
-    display: none;
-  }
-
-  .flex-container {
-    font-size: 1rem;
-  }
-
-  .grid-container {
-    grid-template-areas:
-      "curso curso curso curso curso curso"
-      "redes redes redes redes redes redes"
-      "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
-  }
-}
-
 /*********************************** @Carrusel ************************************************/
 
 .carousel-item img {
@@ -240,4 +195,107 @@ section {
 #nuestrosProductos span {
   font-size: large;
   font-weight: bold;
+}
+
+/*************************** EMPRESA ***********************************/
+
+.grid-container-EMPRESA {
+  margin: 0 auto;
+  background-color: white;
+  padding: 2px;
+  grid-gap: 15px;
+  display: grid;
+  grid-template-areas:
+    "empresa empresa empresa empresa empresa empresa"
+    "mision mision vision vision objetivos objetivos";
+}
+
+.empresa-area {
+  grid-area: empresa;
+}
+
+.mision-area {
+  grid-area: mision;
+}
+
+.vision-area {
+  grid-area: vision;
+}
+
+.objetivos-area {
+  grid-area: objetivos;
+}
+
+.grid-container-EMPRESA div {
+  background-color: #054e0b;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid-container-EMPRESA p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*********************************** @media query TABLE ************************************************/
+
+@media screen and (max-width: 1024px) {
+  #logo {
+    display: none;
+  }
+
+  .flex-container {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "curso curso curso curso curso curso"
+      "redes redes redes redes redes redes"
+      "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
+  }
+
+  .grid-container-EMPRESA {
+    grid-template-areas:
+      "empresa empresa empresa empresa empresa empresa"
+      "mision mision mision vision vision vision"
+      "objetivos objetivos objetivos objetivos objetivos objetivos";
+  }
+}
+
+/*********************************** @media query Telefono ************************************************/
+
+@media screen and (max-width: 480px) {
+  .flex-container {
+    font-size: 1rem;
+    flex-direction: column;
+  }
+
+  .flex-container div {
+    text-align: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "curso"
+      "redes"
+      "integrante1"
+      "integrante2"
+      "integrante3";
+  }
+
+  .grid-container-EMPRESA {
+    grid-template-areas:
+      "empresa"
+      "mision"
+      "vision"
+      "objetivos";
+  }
 }
