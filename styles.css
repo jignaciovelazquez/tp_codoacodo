@@ -214,9 +214,12 @@ img {
   margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 
+/*********************************** Productos ************************************************/
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .grid {
@@ -233,6 +236,74 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+button{
+  margin: 10px;
+  border: 2px #4a8645 solid;
+  padding: 10px;
+  background-color: #4a8645;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+ 
+  
+}
+
+/*************************** EMPRESA ***********************************/
+
+.grid-container-EMPRESA {
+  margin: 0 auto;
+  background-color: white;
+  padding: 2px;
+  grid-gap: 15px;
+  display: grid;
+  grid-template-areas:
+    "empresa empresa empresa empresa empresa empresa"
+    "mision mision vision vision objetivos objetivos";
+}
+
+.empresa-area {
+  grid-area: empresa;
+}
+
+.instalciones-area {
+  grid-area: mision;
+}
+
+.vision-area {
+  grid-area: vision;
+}
+
+.objetivos-area {
+  grid-area: objetivos;
+}
+
+.grid-container-EMPRESA div {
+  background-color: #85bd88;
+  color: white;
+  border-radius: 10px;
+  box-shadow: rgb(0, 0, 0.3);
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid-container-EMPRESA p {
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 /*********************************** @Carrusel ************************************************/
 
