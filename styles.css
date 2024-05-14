@@ -147,7 +147,6 @@ img {
 /*******************************************************************************************/
 
 section {
-  padding: 20px;
   background-color: white;
 }
 
@@ -163,81 +162,122 @@ section {
   margin-bottom: 10px;
 }
 
-/*********************************** @Carrusel ************************************************/
-
-.carousel-item img {
-  height: 500px; /* Ajusta la altura deseada */
-  object-fit: contain;
-}
-/* Estilo personalizado para el carrusel */
-.carousel {
-  background-color: #f0f0f0; /* Color de fondo del carrusel */
-}
-
-/* Estilo personalizado para los controles del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #0e5514; /* Color de fondo de los controles de navegación */
-}
-
-/* Estilo personalizado para los botones de navegación del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-  color: #fff; /* Color del icono de los botones de navegación */
-}
-
 /*************************** PRODUCTOS ************************/
 
-#nuestrosProductos img {
+.containerProduct {
+  display: grid;
+  grid-template-areas:
+    "producto1 producto1 producto2 producto2 producto3 producto3"
+    "producto4 producto4 producto5 producto5 producto6 producto6";
+}
+
+.producto1 {
+  grid-area: producto1;
+}
+.producto2 {
+  grid-area: producto2;
+}
+.producto3 {
+  grid-area: producto3;
+}
+.producto4 {
+  grid-area: producto4;
+}
+.producto5 {
+  grid-area: producto5;
+}
+.producto6 {
+  grid-area: producto6;
+}
+
+.containerProduct div {
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #0e5514;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.containerProduct img {
   height: 300px;
 }
 
-#nuestrosProductos span {
+.containerProduct span {
   font-size: large;
   font-weight: bold;
 }
 
 /*************************** EMPRESA ***********************************/
 
-.grid-container-EMPRESA {
-  margin: 0 auto;
-  background-color: white;
-  padding: 2px;
-  grid-gap: 15px;
-  display: grid;
-  grid-template-areas:
-    "empresa empresa empresa empresa empresa empresa"
-    "mision mision vision vision objetivos objetivos";
+.SECTION_EMPRESA {
+  margin: 10px;
+  padding: 0;
 }
-
-.empresa-area {
-  grid-area: empresa;
-}
-
-.mision-area {
-  grid-area: mision;
-}
-
-.vision-area {
-  grid-area: vision;
-}
-
-.objetivos-area {
-  grid-area: objetivos;
-}
-
-.grid-container-EMPRESA div {
-  background-color: #054e0b;
+.subTitulo {
   color: white;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 0 auto;
   text-align: center;
+  background-color: #0e5514;
+  width: 100%;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #054e0b;
 }
 
-.grid-container-EMPRESA p {
-  margin: 0 auto;
+.paragraph {
+  color: white;
   text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px;
+  background-color: #0e5514;
+  width: 60%;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 30px 10px 30px 10px;
+  border-color: #054e0b;
+  display: flex;
+  margin: 1%;
+}
+
+.image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+}
+
+.image img {
+  height: 100%;
+}
+
+#container {
+  border: black;
+  margin: auto;
+  align-items: center;
+}
+
+#container div {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerFinal {
+  justify-content: center;
+  align-items: center;
+}
+
+.listavalores {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #0e5514;
+  width: 50%;
+  margin-left: 25%;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 30px 10px 30px 10px;
+  border-color: #054e0b;
 }
 
 /*********************************** @media query TABLE ************************************************/
@@ -263,6 +303,28 @@ section {
       "empresa empresa empresa empresa empresa empresa"
       "mision mision mision vision vision vision"
       "objetivos objetivos objetivos objetivos objetivos objetivos";
+  }
+
+  .containerProduct {
+    grid-template-areas:
+      "producto1 producto1 producto2 producto2"
+      "producto3 producto3 producto4 producto4"
+      "producto5 producto5 producto6 producto6";
+  }
+
+  #container div {
+    flex-direction: column;
+  }
+  .paragraph {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+  }
+  .listavalores {
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -297,27 +359,14 @@ section {
       "redes redes redes redes redes redes"
       "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
   }
-}
 
-/*********************************** @Carrusel ************************************************/
-
-.carousel-item img {
-  height: 300px; /* Ajusta la altura deseada */
-  object-fit: contain;
-}
-/* Estilo personalizado para el carrusel */
-.carousel {
-  background-color: #f0f0f0; /* Color de fondo del carrusel */
-}
-
-/* Estilo personalizado para los controles del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #0e5514; /* Color de fondo de los controles de navegación */
-}
-
-/* Estilo personalizado para los botones de navegación del carrusel */
-.carousel-control-prev,
-.carousel-control-next {
-  color: #fff; /* Color del icono de los botones de navegación */
+  .containerProduct {
+    grid-template-areas:
+      "producto1"
+      "producto2"
+      "producto3"
+      "producto4"
+      "producto5"
+      "producto6";
+  }
 }
