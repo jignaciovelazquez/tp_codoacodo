@@ -208,25 +208,65 @@ section {
   }
 }
 
+img {
+  width: 50%; /* Ajusta el ancho */
+  height: auto; /* Mantiene la proporción de aspecto */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.producto {
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*********************************** @Carrusel ************************************************/
 
-.carousel-item img {
+/*.carousel-item img {
   height: 300px; /* Ajusta la altura deseada */
-  object-fit: contain;
-}
+/*  object-fit: contain;
+/*}
 /* Estilo personalizado para el carrusel */
-.carousel {
+/*.carousel {
   background-color: #f0f0f0; /* Color de fondo del carrusel */
-}
+/*}
 
 /* Estilo personalizado para los controles del carrusel */
-.carousel-control-prev-icon,
+/*.carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #0e5514; /* Color de fondo de los controles de navegación */
-}
+/*}
 
 /* Estilo personalizado para los botones de navegación del carrusel */
-.carousel-control-prev,
+/*.carousel-control-prev,
 .carousel-control-next {
   color: #fff; /* Color del icono de los botones de navegación */
-}
+/*}
+
+/*********************************** @Card ************************************************/
+
+/*.card {
+  height: 250px; /* Ajusta la altura */
+/*}
+
+/*.card-img-top {
+  height: 150px; /* Ajusta la altura de la imagen */
+/*}
+
+/*.card-body {
+  font-size: 14px; /* Ajusta el tamaño de la fuente */
+/*}
