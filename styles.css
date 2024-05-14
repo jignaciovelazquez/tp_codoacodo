@@ -153,7 +153,7 @@ section {
 
 #SECTION_CONTACT {
   content: "";
-  background-image: url(./assets/fondocontacto.jpg);
+  background-image: url(./assets/img/fondocontacto.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -163,9 +163,112 @@ section {
   margin-bottom: 10px;
 }
 
+/*********************************** @Carrusel ************************************************/
+
+.carousel-item img {
+  height: 500px; /* Ajusta la altura deseada */
+  object-fit: contain;
+}
+/* Estilo personalizado para el carrusel */
+.carousel {
+  background-color: #f0f0f0; /* Color de fondo del carrusel */
+}
+
+/* Estilo personalizado para los controles del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0e5514; /* Color de fondo de los controles de navegación */
+}
+
+/* Estilo personalizado para los botones de navegación del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  color: #fff; /* Color del icono de los botones de navegación */
+}
+
+/*************************** PRODUCTOS ************************/
+
+#nuestrosProductos img {
+  height: 300px;
+}
+
+#nuestrosProductos span {
+  font-size: large;
+  font-weight: bold;
+}
+
+/*************************** EMPRESA ***********************************/
+
+.grid-container-EMPRESA {
+  margin: 0 auto;
+  background-color: white;
+  padding: 2px;
+  grid-gap: 15px;
+  display: grid;
+  grid-template-areas:
+    "empresa empresa empresa empresa empresa empresa"
+    "mision mision vision vision objetivos objetivos";
+}
+
+.empresa-area {
+  grid-area: empresa;
+}
+
+.mision-area {
+  grid-area: mision;
+}
+
+.vision-area {
+  grid-area: vision;
+}
+
+.objetivos-area {
+  grid-area: objetivos;
+}
+
+.grid-container-EMPRESA div {
+  background-color: #054e0b;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.grid-container-EMPRESA p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*********************************** @media query TABLE ************************************************/
+
+@media screen and (max-width: 1024px) {
+  #logo {
+    display: none;
+  }
+
+  .flex-container {
+    font-size: 1rem;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "curso curso curso curso curso curso"
+      "redes redes redes redes redes redes"
+      "integrante1 integrante1 integrante2 integrante2 integrante3 integrante3";
+  }
+
+  .grid-container-EMPRESA {
+    grid-template-areas:
+      "empresa empresa empresa empresa empresa empresa"
+      "mision mision mision vision vision vision"
+      "objetivos objetivos objetivos objetivos objetivos objetivos";
+  }
+}
+
 /*********************************** @media query Telefono ************************************************/
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .flex-container {
     font-size: 1rem;
     flex-direction: column;
@@ -187,20 +290,8 @@ section {
       "integrante2"
       "integrante3";
   }
-}
 
-/*********************************** @media query TABLE ************************************************/
-
-@media (max-width: 1024px) {
-  #logo {
-    display: none;
-  }
-
-  .flex-container {
-    font-size: 1rem;
-  }
-
-  .grid-container {
+  .grid-container-EMPRESA {
     grid-template-areas:
       "curso curso curso curso curso curso"
       "redes redes redes redes redes redes"
@@ -208,136 +299,25 @@ section {
   }
 }
 
-img {
-  width: 50%; /* Ajusta el ancho */
-  height: auto; /* Mantiene la proporción de aspecto */
-  margin: 0 auto; /* Centra la imagen horizontalmente */
-}
-
-/*********************************** Productos ************************************************/
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-
-.producto {
-  text-align: center;
-}
-
-.producto img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media screen and (max-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-button{
-  margin: 10px;
-  border: 2px #4a8645 solid;
-  padding: 10px;
-  background-color: #4a8645;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: bold;
- 
-  
-}
-
-/*************************** EMPRESA ***********************************/
-
-.grid-container-EMPRESA {
-  margin: 0 auto;
-  background-color: white;
-  padding: 2px;
-  grid-gap: 15px;
-  display: grid;
-  grid-template-areas:
-    "empresa empresa empresa empresa empresa empresa"
-    "mision mision vision vision objetivos objetivos";
-}
-
-.empresa-area {
-  grid-area: empresa;
-}
-
-.instalciones-area {
-  grid-area: mision;
-}
-
-.vision-area {
-  grid-area: vision;
-}
-
-.objetivos-area {
-  grid-area: objetivos;
-}
-
-.grid-container-EMPRESA div {
-  background-color: #85bd88;
-  color: white;
-  border-radius: 10px;
-  box-shadow: rgb(0, 0, 0.3);
-  padding: 15px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.grid-container-EMPRESA p {
-  margin: 0 auto;
-  text-align: center;
-}
-
-
 /*********************************** @Carrusel ************************************************/
 
-/*.carousel-item img {
+.carousel-item img {
   height: 300px; /* Ajusta la altura deseada */
-/*  object-fit: contain;
-/*}
+  object-fit: contain;
+}
 /* Estilo personalizado para el carrusel */
-/*.carousel {
+.carousel {
   background-color: #f0f0f0; /* Color de fondo del carrusel */
-/*}
+}
 
 /* Estilo personalizado para los controles del carrusel */
-/*.carousel-control-prev-icon,
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #0e5514; /* Color de fondo de los controles de navegación */
-/*}
+}
 
 /* Estilo personalizado para los botones de navegación del carrusel */
-/*.carousel-control-prev,
+.carousel-control-prev,
 .carousel-control-next {
   color: #fff; /* Color del icono de los botones de navegación */
-/*}
-
-/*********************************** @Card ************************************************/
-
-/*.card {
-  height: 250px; /* Ajusta la altura */
-/*}
-
-/*.card-img-top {
-  height: 150px; /* Ajusta la altura de la imagen */
-/*}
-
-/*.card-body {
-  font-size: 14px; /* Ajusta el tamaño de la fuente */
-/*}
+}
