@@ -1,26 +1,3 @@
-(() => {
-  "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
-
 document.getElementById("CONTACT_FORM").addEventListener("submit", () => {
   document.getElementById("SEND").disabled = true;
 
@@ -29,23 +6,24 @@ document.getElementById("CONTACT_FORM").addEventListener("submit", () => {
       "alert-danger",
       `Debes completar todos los campos para poder ser contactado por nuestro equipo, vamos, intentalo de nuevo... `
     );
-    CerrarAlerta();
+    CerrarAlerta(0);
     return;
   } else if (validarTelefono()) {
     MostrarAlerta(
       "alert-danger",
       `el Nro de Telefono no cumple con el criterio establecido, debes verificarlo y corregirlo.`
     );
-    CerrarAlerta();
+    CerrarAlerta(0);
     return;
   } else if (validarMail()) {
     MostrarAlerta(
       "alert-danger",
       `el Mail no cumple con el criterio establecido, debes verificarlo y corregirlo.`
     );
-    CerrarAlerta();
+    CerrarAlerta(0);
     return;
   } else {
+    let nombre = document.getElementById("NAME").value;
     let fecha = document.getElementById("FECHA").value;
     let hora = document.getElementById("EDIFPROGRA").value;
     let medio = document.getElementById("CALL").checked
@@ -53,9 +31,9 @@ document.getElementById("CONTACT_FORM").addEventListener("submit", () => {
       : "WhatsApp";
     MostrarAlerta(
       "alert-success",
-      `Te estaremos contactando a traves de ${medio} el dia ${fecha} entre ${hora}`
+      `${nombre}, te estaremos contactando a traves de ${medio} entre ${hora} del dia ${fecha}`
     );
-    CerrarAlerta();
+    CerrarAlerta(1);
   }
 });
 
@@ -123,12 +101,23 @@ function MostrarAlerta(color, mensaje) {
   ContenedorPadre.append(alertaNueva);
 }
 
-function CerrarAlerta() {
+function borrar() {
+  console.log("entra aqui");
+  document.getElementById("NAME").value = "";
+  document.getElementById("SURNAME").value = "";
+  document.getElementById("PHONE").value = "";
+  document.getElementById("ADDRESS").value = "";
+  document.getElementById("MAIL").value = "";
+  document.getElementById("EDIFPROGRA").value = "";
+  document.getElementById("FECHA").value = "";
+  document.getElementById("MESSAGE").value = "";
+}
+
+function CerrarAlerta(limpiar) {
   setTimeout(function () {
     // Closing the alert
     $("#alert").alert("close");
     document.getElementById("SEND").disabled = false;
-  }, 10000);
+    if (limpiar == 1) borrar();
+  }, 8000);
 }
-
-function borrar() {}
